@@ -1,12 +1,11 @@
 # NLP Models for Classical Armenian
 
-This directory contains NLP models trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.14): https://universaldependencies.org/treebanks/xcl_caval/index.html.
+[![CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
+This directory contains NLP models trained on the [UD_Classical_Armenian-CAVaL treebank](https://universaldependencies.org/treebanks/xcl_caval/index.html) (UD v2.14 release).
 
-## Created by: 
+Created by
 - [Lilit Kharatyan](https://www.phil.uni-wuerzburg.de/en/vgsp/team/lilit-kharatyan/)
 - [Petr Kocharov](https://www.phil.uni-wuerzburg.de/en/vgsp/team/dr-petr-kocharov/)
 
-## Acknowledgements
-The models have been developed as part of the "[CAVaL: Classical Armenian Valency Lexicon](https://gepris.dfg.de/gepris/projekt/518003859?context=projekt&task=showDetail&id=518003859&)" project funded by the Deutsche Forschungsgemeinschaft (DFG), project number 518003859. 
+See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
