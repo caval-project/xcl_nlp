@@ -1,46 +1,15 @@
 # Classical Armenian UDPipe 2 Model
 
-This repository contains a UDPipe 2 model for Classical Armenian, including a POS tagger, lemmatizer and dependency parser. The model have been trained on the UD_Classical_Armenian-CAVaL treebank (UD v2.14): https://universaldependencies.org/treebanks/xcl_caval/index.html The deployment and use of this model require some computational knowledge and resources and are intended as a research tool rather than a user-friendly, intuitive application.
+The Classical Armenian model `classical_armenian-caval-ud-2.15-241121` is part of the **Universal Dependencies 2.15 Models** release and is distributed under the **CC BY-NC-SA** licence.  
+The model is available via the UDPipe 2 **REST service** at: https://lindat.mff.cuni.cz/services/udpipe/
 
-See a detailed description of the models in [Kharatyan, Kocharov 2024](https://github.com/caval-repository/xcl_nlp/blob/main/Kharatyan_Kocharov_2024_xcl_parsers.pdf).
+Below are the official evaluation results on the UD test set:
 
-## Created by: Lilit Kharatyan, Petr Kocharov
+| Model                                      | Mode              | Words | Sents | UPOS  | XPOS | UFeats | AllTags | Lemma | UAS   | LAS   | MLAS  | BLEX  |
+|-------------------------------------------|-------------------|:-----:|:-----:|:-----:|:----:|:------:|:-------:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| classical_armenian-caval-ud-2.15-241121   | Raw text          | 98.80 | 60.28 | 97.16 | —    | 94.95  | 94.10   | 97.40 | 82.79 | 79.50 | 68.83 | 73.76 |
+| classical_armenian-caval-ud-2.15-241121   | Gold tokenization | —     | —     | 98.23 | —    | 96.05  | 95.13   | 98.49 | 88.81 | 85.30 | 73.40 | 78.39 |
 
-## License: CC BY-SA 4.0
-
-## Directory Structure
-
-- **Parsers**
-  - **UDPipe**
-    - `checkpoint`
-    - `events.out.tfevents.1714655826.WVGL039.v2`
-    - `log`
-    - `mappings.pickle`
-    - `options.json`
-    - `weights.data-00000-of-00001`
-    - `weights.index`
-    - `XCL.tokenizer`
-    - **C**
-      - `events.out.tfevents.1708955920.WVGL039.v2`
-      - `events.out.tfevents.1714655826.WVGL039.v2`
-
-## Deployment
-
-To deploy this model, follow the guidelines provided in the [UDPipe 2 GitHub repository](https://github.com/ufal/udpipe/tree/udpipe-2).
-
-## Important Configuration
-
-Ensure that the `udpipe2_server.py` file contains the following lines to correctly compute the word embeddings:
-
-```python
-# Compute the WEmbeddings
-with self._server_args.optional_semaphore:
-    time_we = time.time()
-    if self._network.args.wembedding_model:
-        wembeddings = self._server_args.wembedding_server.compute_embeddings(self._network.args.wembedding_model, wembedding_input)
-    else:
-        wembeddings = []
-```
 ## Acknowledgments
 
 The models have been developed as part of the "CAVaL: Classical Armenian Valency Lexicon" project funded by the Deutsche Forschungsgemeinschaft (DFG), project number 518003859.
